@@ -1,0 +1,52 @@
+body {
+    background-image: url(background.jpg);
+    margin: 0%;
+    padding: 0%;
+    
+}
+h1 {
+    text-align: center;
+    color: blue;
+    font-style: italic;
+}
+form {
+    margin: 2%;
+    padding: 2%;
+
+
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #navbar a:hover {
+    background-color: red;
+  }
+
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 0px;
+  }
+  
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+   .sticky + .content {
+    padding-top: 0px;
+  }

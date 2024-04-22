@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Prabit_yt</title>
+</head>
+
+<body>
+     <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <p>Current Date and Time is <span id='date-time'></span>.</p>
+    <h1>Online Store</h1>
+    <h2> Stay updated for more details.</h2>
+</body>
+
+<script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML = dt;
+</script>
+
+<style>
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .slider img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .slider img.active {
+        opacity: 1;
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .slider-control {
+        display: inline-block;
+        margin: 0 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+    }
+
+    .slider-control.active {
+        background-color: #555;
+    }
+</style>
+</head>
+
+<body>     
+    
+    <div class="slider">
+        <img src="img.jpg" alt="Image 1" class="active" width="100">
+        <img src="img1.jpg" alt="Image 2">
+        <img src="img2.webp" alt="Image 3">
+        <img src="img3.jpg" alt="Image 4">
+        <img src="img4.avif" alt="Image 5">
+        <img src="img5.jpg" alt="Image 6">
+        <img src="img6.jpeg" alt="Image 7">
+        <img src="img8.jpg" alt="Image 8">
+
+        <div class="slider-controls">
+            <span class="slider-control active" onclick="showImage(1)"></span>
+            <span class="slider-control" onclick="showImage(2)"></span>
+            <span class="slider-control" onclick="showImage(3)"></span>
+            <span class="slider-control" onclick="showImage(4)"></span>
+            <span class="slider-control" onclick="showImage(5)"></span>
+            <span class="slider-control" onclick="showImage(6)"></span>
+            <span class="slider-control" onclick="showImage(7)"></span>
+            <span class="slider-control" onclick="showImage(8)"></span>
+
+        </div>
+    </div>
+    <script>
+        let currentImageIndex = 1;
+        const images = document.querySelectorAll('.slider img');
+        const controls = document.querySelectorAll('.slider-control');
+
+        function showImage(index) {
+            images[currentImageIndex - 1].classList.remove('active');
+            controls[currentImageIndex - 1].classList.remove('active');
+            images[index - 1].classList.add('active');
+            controls[index - 1].classList.add('active');
+            currentImageIndex = index;
+        }
+
+        function nextImage() {
+            let nextIndex = currentImageIndex + 1;
+            if (nextIndex > images.length) {
+                nextIndex = 1;
+            }
+            showImage(nextIndex);
+        }
+
+        setInterval(nextImage, 5000);
+    </script>
+    <div class="section">
+        <h1> Ryzen 9 5950X </h1>
+        <p>The Ryzen 9 5950X is designed to handle tasks like content creation and gaming. 
+        It supports Windows 11, and is unlocked for overclocking. 
+        According to PCGameBenchmark, the Ryzen 9 5950X can run 1,000 of the top 1,000 games,
+        including GTA V, Rainbow Six Siege, PUBG, Red Dead Redemption 2, Apex Legends, Minecraft,
+        Fortnite,Overwatch, and League of Legends. 
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Online Store  Nepal's Best Store!
+                please contact us if any problem</h3>
+            <div class="mail">
+                <a href="mailto:prabitjoshi@gmail.com">Send Email</a>
+                <p>Call for a customer support 
+                    <a href="tel:+9779761660142">+9779761660142</a>.</p>
+            </div>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/profile.php?id=100090163986400"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/prabit-joshi-642b1b246/""><i class=" fa fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/prabit_joshi/" class="instagram"><i
+                            class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCgtK-j8LND4kh09ply9IzMQ" youtube"><i
+                            class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Online Store Nepal</p>
+        </div>
+    </footer>
+</body>
+
+</html>

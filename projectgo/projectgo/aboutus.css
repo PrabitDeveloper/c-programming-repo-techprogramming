@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: springgreen;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.team-member {
+    margin-bottom: 20px;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ff0000; /* Red background color */
+    padding: 10px; /* Add padding for space around the links */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.social-media-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #fff; /* White color for the icon */
+    font-size: 24px; /* Adjust the font size based on your design */
+}
+
+.social-media-links a i {
+    transition: color 0.3s ease;
+}
+
+.social-media-links a:hover i {
+    color: #007bff; /* Change to your preferred hover color */
+}
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  #navbar a:hover {
+    background-color: red;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  

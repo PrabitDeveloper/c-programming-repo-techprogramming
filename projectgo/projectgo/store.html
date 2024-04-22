@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="store.css">
+    <title>Online Store</title>
+</head>
+<body>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+</div>
+<div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+</div>
+<div class="store-container">
+    <div class="product" data-name="macbook air 13 pro">
+        <img src="macbookair13pro.jpeg" alt="macbook air 13 pro">
+        <h3>macbookair13pro</h3>
+        <p>$1200.00</p>
+        <button onclick="addToCart('Mackbook air 13 pro', 1200.00)">Add to Cart</button>
+    </div>
+    <div class="product" data-name="Playstation 5">
+        <img src="ps5.jpeg" alt="playstation 5">
+        <h3>Playstation5</h3>
+        <p>$499.99</p>
+        <button onclick="addToCart('ps5', 499.99)">Add to Cart</button>
+    </div>
+
+    <!-- Add more products as needed -->
+
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
